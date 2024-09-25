@@ -3,10 +3,10 @@
     --light-bg: #f2f2f2;
     --dark-bg: #202c36;
     --light-header-bg: #fff;
-    --dark-header-bg: #2b3844;
+    --dark-element-bg: #2b3844;
     /* outline color */
     --dark-outline: var(--text-color);
-    --light-outline: white;
+    outline-offset: 10px;
   }
   /* nunito-sans-300 - latin */
   @font-face {
@@ -15,7 +15,7 @@
     font-style: normal;
     font-weight: 300;
     src: url('../fonts/nunito-sans-v15-latin-300.woff2') format('woff2'), 
-         url('../fonts/nunito-sans-v15-latin-300.ttf') format('truetype'); 
+          url('../fonts/nunito-sans-v15-latin-300.ttf') format('truetype'); 
   }
   /* nunito-sans-regular - latin */
   @font-face {
@@ -144,6 +144,33 @@
   }
   .main-content{
       flex-grow: 1;
+      padding-top: 45px;
+      padding-bottom: 45px;
+  }
+
+  /* Filters */
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search-input {
+    min-width: 480px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+    background-color: var(--dark-element-bg);
+    border: 0;
+    padding: 18px 18px 18px 24px;
+    color: var(--text-color );
+  }
+  .region-select {
+    min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+    background-color: var(--dark-element-bg);
+    border: 0;
+    padding: 18px 10px 18px 74px;
+    color: var(--text-color );
   }
   
   .mode-toggler:hover{
