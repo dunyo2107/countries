@@ -1,14 +1,10 @@
 :root{
     --text-color: #111517;
     --light-bg: #f2f2f2;
-    --dark-bg: #202c36;
-    --light-header-bg: #fff;
-    --dark-element-bg: #2b3844;
+    --light-element-bg: #fff;
     /* outline color */
     --dark-outline: var(--text-color);
     outline-offset: 10px;
-    color:  #f2f2f2;
-    background: #202c36;
   }
   /* nunito-sans-300 - latin */
   @font-face {
@@ -74,9 +70,8 @@
           color .3s ease;
   }
   .dark-mode{
-    background-color: var(--dark-bg);
-    color: white;
-    --light-header-bg: var(--dark-element-bg);
+    --light-bg: #202c36;
+    --light-element-bg: #2b3844;
     --text-color: white;
     --dark-outline: white;
   }
@@ -99,7 +94,7 @@
   /* Header */
   .header {
     padding: 24px 0;
-    background-color: var(--light-header-bg);
+    background-color: var(--light-element-bg);
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
   }
   .site-header-container {
@@ -161,7 +156,7 @@
     min-width: 480px;
     border-radius: 5px;
     box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
-    background-color: var(--light-header-bg);
+    background-color: var(--light-element-bg);
     border: 0;
     padding: 18px 18px 18px 24px;
     color: var(--text-color );
@@ -170,7 +165,7 @@
     min-width: 200px;
     border-radius: 5px;
     box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
-    background-color: var(--light-header-bg);
+    background-color: var(--light-element-bg);
     border: 0;
     padding: 18px 10px 18px 74px;
     color: var(--text-color );
@@ -188,14 +183,16 @@
     padding: 0;
     list-style: none;
     margin-left: -75px;
+    margin-bottom: -75px;
   }
   .index-countries-item {
     width: calc(25% - 75px);
     margin-left: 75px;
+    margin-bottom: 75px;
   }
   .index-country {
     border-radius: 5px;
-    background-color:var(--light-header-bg);
+    background-color:var(--light-element-bg);
     color: var(--text-color);
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.03);
     overflow: hidden;
@@ -206,7 +203,7 @@
     object-fit: cover;
   }
   .index-country-info {
-    padding: 24px 0 46px 24px;
+    padding: 24px 24px 46px 24px;
   }
   .country-name {
     color: var(--text-color);
@@ -217,7 +214,7 @@
   }
   .country-link{
     color: var(--text-color);
-    font-size: 18px;
+    font-size: 14px;
     text-decoration: none;
   }
   .country-link:hover{
@@ -230,6 +227,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+  }
+  .country-info-description:not(:last-child){
+    margin-right: 117px;
   }
   .country-descriptions {
     display: flex;
@@ -248,6 +249,77 @@
     margin: 0;
     margin-left: 5px;
   }
+
+  .country-page {
+    background-color: var(--light-element-bg);
+  }
+  .back{
+    margin-bottom: 80px;
+  }
+  .country-back-link {
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 39px 10px  32px;
+    background-color: var(--light-element-bg);
+    border-radius: 6px;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+
+  }
+  .country-back-icon {
+    margin-right: 10px;
+  }
+  .country-back-text {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+
+
+  /*  */
+  .country-page-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .country-page-img{
+    width: 560px;
+    height: 340px;
+  }
+  .country-page-country-name{
+    color: var(--text-color);
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 44px;
+    margin: 0;
+    margin-bottom: 23px;
+  }
+  .country-page-country-descriptions-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .country-page-country-descriptions:not(:last-child){
+    margin-bottom: 8px;
+  }
+  .country-page-country-description-term{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-right: 5px;
+  }
+  .country-page-country-descriptions{
+    display: flex;
+    color: var(--text-color);
+  }
+  .country-page-country-description-description{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 32px;
+  }
+  
   @media
   only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (   min--moz-device-pixel-ratio: 2),
